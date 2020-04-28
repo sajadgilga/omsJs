@@ -11,7 +11,8 @@ class SignalR {
             console.log('SignalR client connected.')
         })
         this.client.on('error', (code, ex) => {
-            console.log(`SignalR this.client connect error: ${code}.`)
+            console.log(`SignalR this.client connect error: ${code}. `)
+            console.log(signalr.error)
         })
         this.client.connection.hub.on('GetNewAPIToken', 'GetNewAPIToken', (message) => {
             console.log('receive:', message)
